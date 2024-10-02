@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title> Penjumlahan
+    </title>
+    <body>
+      <P>
+        <script language="javascript">
+
+          function jumlah()
+            {
+              var bil1= parseFloat(document.penghitung.bilangan1.value);
+              if (isNaN (bil1))
+                bil1=0.0;
+                 var bil2= parseFloat(document.penghitung.bilangan2.value);
+               if (isNaN (bil2))
+                bil1=0.0;
+                 var hasil = bil1 + bil2;
+              console.log("hasil penjumlahan="+hasil);
+            }
+        </script>
+
+        <form name="penfghitung">
+          <h1> Masukan Data Via From</h1>
+
+          <pre> 
+          Bilangan pertama :<input type="text" size="11" name="bilangan1"/>
+          Bilangan kedua :<input type="text" size="11" name="bilangan2"/>
+            
+                              </pre>
+
+          <input type="button" value="jumlahkan" onclick="jumlah()"/>
+        </form>
+    </p>
+    </body>
+</html>
+              
+      </P>
+    </body>
+  </head>
