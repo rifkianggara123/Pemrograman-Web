@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pertanyaan 6</title>
+</head>
+<body>
+<h1>Voucher Salon</h1>
+<label for="totalVisits">Total visits:</label>
+<input type="number" id="totalVisits" name="totalVisits">
+<button type="submit">Check Bonus</button>
+</form>
+<div id="result"></div>
+<script>
+const form = document.querySelector('form');
+form.addEventListener('submit', (e) => {
+e.preventDefault();
+const totalVisits =
+parseInt(document.querySelector('#totalVisits').value);
+const couponCount = totalVisits;
+let bonusMessage = '';
+if (totalVisits >= 10) {
+bonusMessage = 'You have earned a free visit!';
+} else {
+bonusMessage = 'You need ' + (10 - totalVisits) + ' more visits to
+earn a free visit.';
+}
+document.querySelector('#result').innerHTML = `
+<p>Total visits: ${totalVisits}</p>
+<p>Coupons: ${couponCount}</p>
+<p>${bonusMessage}</p>
+`;
+});
+</script>
+</body>
+</html>
