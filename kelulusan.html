@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Status Kelulusan Siswa</title>
+</head>
+
+    <script>
+    function periksaKelulusan() {
+    var namaSiswa = prompt("Masukkan nama siswa (pisahkan dengan
+    koma):").split(",");
+
+      var nilaiSiswa = [];
+      for (var i = 0; i < namaSiswa.length; i++) {
+      var nilai = prompt("Masukkan nilai Matematika, Biologi,
+      Fisika, dan Kimia untuk " + namaSiswa[i] + " (pisahkan
+      dengan koma):").split(",");
+      nilaiSiswa.push(nilai.map(Number));
+      }
+
+var standarKelulusan = 60;
+var lulus = [];
+var tidakLulus = [];
+
+      for (var i = 0; i < namaSiswa.length; i++) {
+      var nilai = nilaiSiswa[i];
+      var lulusSemua = true;
+      for (var j = 0; j < nilai.length; j++) {
+      if (nilai[j] < standarKelulusan) {
+      lulusSemua = false;
+      break;
+      }
+      }
+            if (lulusSemua) {
+            lulus.push(namaSiswa[i]);
+            } else {
+            tidakLulus.push(namaSiswa[i]);
+            }
+            }
+    if (lulus.length === namaSiswa.length) {
+    alert("Semua Lulus");
+    } else if (tidakLulus.length === namaSiswa.length) {
+    alert("Semua Tidak Lulus");
+    } else {
+    var hasil = "Lulus: " + lulus.join(", ") + "\nTidak Lulus: " +
+    tidakLulus.join(", ");
+    alert(hasil);
+    }
+    }
+
+periksaKelulusan();
+</script>
+</html>
