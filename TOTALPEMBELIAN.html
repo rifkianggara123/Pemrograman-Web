@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Pembelian Toko</title>
+    <script>
+        function hitungTotal() {
+            // Ambil input harga barang dan jumlah barang yang dibeli
+            var hargaBarang = parseFloat(document.getElementById("hargaBarang").value);
+            var jumlahBarang = parseInt(document.getElementById("jumlahBarang").value);
+            
+            // Hitung total harga sebelum diskon
+            var totalHarga = hargaBarang * jumlahBarang;
+
+            // Inisialisasi variabel diskon
+            var diskon = 0;
+
+            // Cek apakah jumlah barang lebih dari 50 untuk mendapatkan diskon 10%
+            if (jumlahBarang > 50) {
+                diskon = totalHarga * 0.1; // 10% dari total harga
+            }
+
+            // Hitung total harga setelah diskon
+            var hargaSetelahDiskon = totalHarga - diskon;
+
+            // Tampilkan hasil dalam alert
+            alert("Harga keseluruhan tanpa diskon: Rp" + totalHarga.toFixed(2) +
+                  "\nDiskon yang diberikan: Rp" + diskon.toFixed(2) +
+                  "\nHarga setelah diskon: Rp" + hargaSetelahDiskon.toFixed(2));
+        }
+    </script>
+</head>
+<body>
+    <h1>Hitung Total Pembelian</h1>
+    <label for="hargaBarang">Masukkan harga barang (Rp):</label>
+    <input type="number" id="hargaBarang" min="0" required><br><br>
+    
+    <label for="jumlahBarang">Masukkan jumlah barang yang dibeli:</label>
+    <input type="number" id="jumlahBarang" min="0" required><br><br>
+    
+    <button onclick="hitungTotal()">Hitung Total</button>
+</body>
+</html>
