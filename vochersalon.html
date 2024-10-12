@@ -1,35 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-<title>Pertanyaan 6</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Kupon Salon</title>
+    <script>
+        function cekBonus() {
+            // Ambil input dari pengguna
+            var totalKunjungan = document.getElementById("totalKunjungan").value;
+            
+            // Hitung jumlah kupon yang dimiliki
+            var potonganKupon = totalKunjungan % 10;
+            
+            // Cek apakah pelanggan berhak mendapatkan kunjungan gratis
+            var kunjunganGratis = Math.floor(totalKunjungan / 10);
+
+            // Tampilkan hasil dalam alert
+            if (kunjunganGratis > 0) {
+                alert("Total kunjungan: " + totalKunjungan + "\nPotongan kupon yang dimiliki: " + potonganKupon + "\nAnda sudah mendapatkan " + kunjunganGratis + " kunjungan gratis!");
+            } else {
+                alert("Total kunjungan: " + totalKunjungan + "\nPotongan kupon yang dimiliki: " + potonganKupon + "\nAnda belum mendapatkan kunjungan gratis.");
+            }
+        }
+    </script>
 </head>
 <body>
-<h1>Voucher Salon</h1>
-<label for="totalVisits">Total visits:</label>
-<input type="number" id="totalVisits" name="totalVisits">
-<button type="submit">Check Bonus</button>
-</form>
-<div id="result"></div>
-<script>
-const form = document.querySelector('form');
-form.addEventListener('submit', (e) => {
-e.preventDefault();
-const totalVisits =
-parseInt(document.querySelector('#totalVisits').value);
-const couponCount = totalVisits;
-let bonusMessage = '';
-if (totalVisits >= 10) {
-bonusMessage = 'You have earned a free visit!';
-} else {
-bonusMessage = 'You need ' + (10 - totalVisits) + ' more visits to
-earn a free visit.';
-}
-document.querySelector('#result').innerHTML = `
-<p>Total visits: ${totalVisits}</p>
-<p>Coupons: ${couponCount}</p>
-<p>${bonusMessage}</p>
-`;
-});
-</script>
+    <h1>Cek Bonus Salon</h1>
+    <label for="totalKunjungan">Masukkan total kunjungan Anda:</label>
+    <input type="number" id="totalKunjungan" min="0" required>
+    <button onclick="cekBonus()">Cek Bonus</button>
 </body>
 </html>
