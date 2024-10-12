@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pengecekan Membership Restoran</title>
-    <script defer src="diskon.js"></script>
-</head>
-<body>
-    <h1>Pengecekan Membership Restoran</h1>
-    <div id="lena-result"></div>
-    <div id="rio-result"></div>
+   </head>
+    <body>
+<h1>Cek Membership dan Diskon</h1>
+<script>
+
+function cekMembership(nama, memilikiMembership) {
+if (memilikiMembership) {
+console.log(nama + " mendapatkan diskon 5%");
+} else {
+console.log(nama + " tidak mendapatkan diskon");
+}
+}
+
+cekMembership("Lena", true);
+cekMembership("Rio", false);
+</script>
 </body>
 </html>
+
