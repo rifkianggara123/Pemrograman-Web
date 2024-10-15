@@ -9,47 +9,65 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #e0e0e0;
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 900px;
+            margin: 20px auto;
             background-color: #fff;
-            padding: 20px;
+            display: flex;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        header {
-            text-align: center;
+        .sidebar {
             background-color: #333;
             color: #fff;
-            padding: 20px 0;
+            padding: 20px;
+            width: 300px;
         }
-        header img {
-            width: 150px;
+        .sidebar img {
+            width: 100%;
             border-radius: 50%;
         }
-        header h1 {
-            margin: 10px 0 0;
-            font-size: 28px;
+        .sidebar h1 {
+            font-size: 24px;
+            margin-top: 20px;
         }
-        header p {
-            margin: 5px 0;
+        .sidebar p {
             font-size: 18px;
+            color: #f4f4f4;
         }
-        section {
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
             margin: 20px 0;
         }
-        h2 {
-            color: #333;
-            border-bottom: 2px solid #f4f4f4;
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+        .sidebar ul li span {
+            font-weight: bold;
+            color: #f0c929;
+        }
+        .content {
+            padding: 20px;
+            flex-grow: 1;
+            background-color: #f0f0f0;
+        }
+        .content h2 {
+            color: #f0c929;
+            border-bottom: 2px solid #333;
             padding-bottom: 5px;
         }
-        ul {
+        .content ul {
             list-style: none;
             padding: 0;
         }
-        ul li {
-            margin: 10px 0;
+        .content ul li {
+            margin: 15px 0;
+            color: #333;
+        }
+        .content ul li strong {
+            font-size: 18px;
         }
         footer {
             text-align: center;
@@ -62,81 +80,85 @@
 <body>
 
 <div class="container">
-    <header>
-        <img src="https://via.placeholder.com/150" alt="Foto Laura Smith">
+    <!-- Sidebar kiri -->
+    <div class="sidebar">
+        <img src="https://via.placeholder.com/250" alt="Foto Laura Smith">
         <h1>Laura Smith</h1>
         <p>Graphic Designer</p>
-    </header>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <ul>
-            <li>Email: laura.smith@example.com</li>
-            <li>WhatsApp: +628123456789</li>
-            <li>LinkedIn: linkedin.com/in/laurasmith</li>
-        </ul>
-    </section>
+        <section id="contact">
+            <h3>Contact</h3>
+            <ul>
+                <li><span>Email:</span> laura.smith@example.com</li>
+                <li><span>WhatsApp:</span> +628123456789</li>
+                <li><span>LinkedIn:</span> linkedin.com/in/laurasmith</li>
+            </ul>
+        </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Graphic Design</li>
-            <li>Adobe Photoshop, Illustrator</li>
-            <li>Web Design (HTML, CSS, JavaScript)</li>
-            <li>UI/UX Design</li>
-        </ul>
-    </section>
+        <section id="skills">
+            <h3>Skills</h3>
+            <ul>
+                <li>Graphic Design</li>
+                <li>Adobe Photoshop, Illustrator</li>
+                <li>Web Design (HTML, CSS, JavaScript)</li>
+                <li>UI/UX Design</li>
+            </ul>
+        </section>
 
-    <section id="languages">
-        <h2>Languages</h2>
-        <ul>
-            <li>Bahasa Indonesia - Native</li>
-            <li>English - Fluent</li>
-        </ul>
-    </section>
+        <section id="languages">
+            <h3>Languages</h3>
+            <ul>
+                <li>Bahasa Indonesia - Native</li>
+                <li>English - Fluent</li>
+            </ul>
+        </section>
+    </div>
 
-    <section id="experience">
-        <h2>Work Experience</h2>
-        <ul>
-            <li>
-                <strong>Company Name</strong> - Graphic Designer<br>
-                <em>Jan 2021 - Present</em><br>
-                Responsible for creating visual content, branding, and promotional materials.
-            </li>
-            <li>
-                <strong>Company Name</strong> - Junior Designer<br>
-                <em>Feb 2019 - Dec 2020</em><br>
-                Assisted in design projects and collaborated with senior designers on various projects.
-            </li>
-        </ul>
-    </section>
+    <!-- Konten utama -->
+    <div class="content">
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <ul>
+                <li>
+                    <strong>Company Name</strong> - Graphic Designer<br>
+                    <em>Jan 2021 - Present</em><br>
+                    Responsible for creating visual content, branding, and promotional materials.
+                </li>
+                <li>
+                    <strong>Company Name</strong> - Junior Designer<br>
+                    <em>Feb 2019 - Dec 2020</em><br>
+                    Assisted in design projects and collaborated with senior designers on various projects.
+                </li>
+            </ul>
+        </section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <ul>
-            <li>
-                <strong>Universitas Negeri Indonesia</strong><br>
-                Bachelor of Arts in Graphic Design<br>
-                <em>2015 - 2019</em>
-            </li>
-        </ul>
-    </section>
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>Universitas Negeri Indonesia</strong><br>
+                    Bachelor of Arts in Graphic Design<br>
+                    <em>2015 - 2019</em>
+                </li>
+            </ul>
+        </section>
 
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <ul>
-            <li>Adobe Certified Expert - Photoshop</li>
-            <li>Google UX Design Professional Certificate</li>
-        </ul>
-    </section>
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Adobe Certified Expert - Photoshop</li>
+                <li>Google UX Design Professional Certificate</li>
+            </ul>
+        </section>
 
-    <section id="organizations">
-        <h2>Organizational Experience</h2>
-        <ul>
-            <li>President of Graphic Design Club - Universitas Negeri Indonesia (2017 - 2019)</li>
-            <li>Member of Indonesian Creative Community (2020 - Present)</li>
-        </ul>
-    </section>
+        <section id="organizations">
+            <h2>Organizational Experience</h2>
+            <ul>
+                <li>President of Graphic Design Club - Universitas Negeri Indonesia (2017 - 2019)</li>
+                <li>Member of Indonesian Creative Community (2020 - Present)</li>
+            </ul>
+        </section>
+    </div>
 </div>
 
 <footer>
