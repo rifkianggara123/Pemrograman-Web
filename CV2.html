@@ -33,13 +33,18 @@
         }
         .header img {
             width: 150px;
-            height: 150px;
-            border-radius: 50%;
+            height: 225px; /* Proporsi foto 4x6 */
+            object-fit: cover;
+            border-radius: 5px;
             border: 4px solid #fff;
         }
         .header h1 {
             margin-left: 20px;
             font-size: 2.5em;
+        }
+        .header p {
+            font-size: 1.2em;
+            margin-top: 5px;
         }
         .content {
             display: flex;
@@ -60,11 +65,11 @@
             margin-bottom: 15px;
             color: #2c3e50;
         }
-        .skills ul, .experience ul, .education ul, .organizations ul {
+        .skills ul, .experience ul, .education ul, .organizations ul, .languages ul {
             list-style-type: none;
             padding: 0;
         }
-        .skills ul li, .experience ul li, .education ul li, .organizations ul li {
+        .skills ul li, .experience ul li, .education ul li, .organizations ul li, .languages ul li {
             padding: 10px 0;
             border-bottom: 1px solid #bdc3c7;
         }
@@ -102,8 +107,11 @@
     <div class="container">
         <div class="header">
             <!-- Foto Anda -->
-            <img src="Foto Formal.jpg" alt="Foto M. Rifki Anggara Yudha">
-            <h1>M. Rifki Anggara Yudha</h1>
+            <img src="foto-anda.jpg" alt="Foto M. Rifki Anggara Yudha">
+            <div>
+                <h1>M. Rifki Anggara Yudha</h1>
+                <p>Mahasiswa Pendidikan Teknologi Informasi</p>
+            </div>
         </div>
 
         <div class="content">
@@ -138,14 +146,14 @@
                 <section class="organizations">
                     <h2 class="section-title">Pengalaman Organisasi</h2>
                     <ul>
-                        <li>Ketua Divisi Ketaqwaan OSIS SMA (2021)</li>
-                        <li>Sekretaris Pramuka SMA (2021)</li>
-                        <li>Bendahara Rohani Islam Sekolah (2021)</li>
-                        <li>Bidang Kemediaan Islam, Generasi Muda FPPI (2023)</li>
-                        <li>Divisi Media Center, Himasakta Eksakta Muda (2023)</li>
-                        <li>Anggota Divisi Soshum, Himasakta (2024)</li>
-                        <li>Kepala Bidang Humas, FPPI (2024)</li>
-                        <li>Anggota Staff DPM U Komisi 7 (2024)</li>
+                        <li>- Ketua Divisi Ketaqwaan OSIS SMA (2021)</li>
+                        <li>- Sekretaris Pramuka SMA (2021)</li>
+                        <li>- Bendahara Rohani Islam Sekolah (2021)</li>
+                        <li>- Bidang Kemediaan Islam, Generasi Muda FPPI (2023)</li>
+                        <li>- Divisi Media Center, Himasakta Eksakta Muda (2023)</li>
+                        <li>- Anggota Divisi Soshum, Himasakta (2024)</li>
+                        <li>- Kepala Bidang Humas, FPPI (2024)</li>
+                        <li>- Anggota Staff DPM U Komisi 7 (2024)</li>
                     </ul>
                 </section>
             </div>
@@ -168,6 +176,13 @@
                         <li>Leadership</li>
                         <li>Programmer (HTML, CSS)</li>
                         <li>Corel Draw</li>
+                    </ul>
+                </section>
+
+                <!-- Bahasa -->
+                <section class="languages">
+                    <h2>Bahasa</h2>
+                    <ul>
                         <li>Bahasa Indonesia (Lancar)</li>
                         <li>Bahasa Inggris (Sedikit)</li>
                     </ul>
