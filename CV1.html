@@ -25,10 +25,10 @@
             width: 300px;
         }
         .sidebar img {
-            width: 100%;
-            height: 250px; /* Mengubah foto menjadi kotak */
-            object-fit: cover; /* Memastikan gambar tidak terdistorsi */
-            border-radius: 8px; /* Menambahkan sedikit sudut membulat */
+            width: 151px; /* Lebar 4 cm */
+            height: 227px; /* Tinggi 6 cm */
+            object-fit: cover;
+            border-radius: 8px; /* Menambahkan sudut membulat */
         }
         .sidebar h1 {
             font-size: 24px;
@@ -46,9 +46,12 @@
         .sidebar ul li {
             margin: 10px 0;
         }
-        .sidebar ul li span {
-            font-weight: bold;
+        .sidebar ul li a {
             color: #f0c929;
+            text-decoration: none;
+        }
+        .sidebar ul li a:hover {
+            text-decoration: underline;
         }
         .content {
             padding: 20px;
@@ -65,15 +68,15 @@
             padding: 0;
         }
         .content ul li {
-            margin: 15px 0; /* Menambahkan jarak antar baris */
+            margin: 15px 0;
             color: #333;
-            line-height: 1.15; /* Mengatur jarak antar baris menjadi 1.15 */
+            line-height: 1.15; /* Jarak antar baris */
         }
         .content ul li strong {
             font-size: 18px;
         }
         .description {
-            margin: 20px 0; /* Menambahkan jarak di sekitar deskripsi */
+            margin: 20px 0;
         }
         .section {
             border-top: 1px solid #ddd;
@@ -100,10 +103,10 @@
         <section id="contact" class="section">
             <h3>Kontak</h3>
             <ul>
-                <li><span>Email:</span> m.rifkianggarayudha@gmail.com</li>
-                <li><span>WhatsApp:</span> +6281930093111</li>
-                <li><span>LinkedIn:</span> linkedin.com/in/M. Rifki Anggara Yudha</li>
-                <li><span>GitHub:</span> github.com/rifkianggara123</li>
+                <li><span>Email:</span> <a href="mailto:m.rifkianggarayudha@gmail.com">m.rifkianggarayudha@gmail.com</a></li>
+                <li><span>WhatsApp:</span> <a href="https://wa.me/6281930093111" target="_blank">+6281930093111</a></li>
+                <li><span>LinkedIn:</span> <a href="https://linkedin.com/in/M. Rifki Anggara Yudha" target="_blank">linkedin.com/in/M. Rifki Anggara Yudha</a></li>
+                <li><span>GitHub:</span> <a href="https://github.com/rifkianggara123" target="_blank">github.com/rifkianggara123</a></li>
             </ul>
         </section>
 
@@ -127,7 +130,6 @@
 
     <!-- Konten utama -->
     <div class="content">
-        <!-- Deskripsi Diri -->
         <section class="description">
             <h2>Tentang Saya</h2>
             <p>
