@@ -26,7 +26,9 @@
         }
         .sidebar img {
             width: 100%;
-            border-radius: 50%;
+            height: 250px; /* Mengubah foto menjadi kotak */
+            object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+            border-radius: 8px; /* Menambahkan sedikit sudut membulat */
         }
         .sidebar h1 {
             font-size: 24px;
@@ -63,14 +65,14 @@
             padding: 0;
         }
         .content ul li {
-            margin: 15px 0;
+            margin: 15px 0; /* Menambahkan jarak antar baris */
             color: #333;
         }
         .content ul li strong {
             font-size: 18px;
         }
         .description {
-            margin: 20px 0;
+            margin: 20px 0; /* Menambahkan jarak di sekitar deskripsi */
         }
         .section {
             border-top: 1px solid #ddd;
@@ -135,8 +137,7 @@
         <section id="experience" class="section">
             <h2>Pengalaman Kerja</h2>
             <ul>
-                <li><strong>Pengajar Ekstrakurikuler Pramuka SMP 2 Seputih Agung</strong> - Tahun 2022</li>
-                <li><strong>Pengajar Ekstrakurikuler Pramuka SMP 8 Bandar Lampung</strong> - Tahun 2023-2024</li>
+                <li><strong>Pengajar Ekstrakurikuler Pramuka SMP 2 Seputih Agung</strong> - Tahun 2022, <strong>Pengajar Ekstrakurikuler Pramuka SMP 2 Seputih Agung</strong> - Tahun 2023-2024</li>
             </ul>
         </section>
 
@@ -160,14 +161,14 @@
                 <li><strong>Divisi Media Center</strong> - Eksakta Muda HIMASAKTA (2023)</li>
                 <li><strong>Anggota Divisi Soshum</strong> - HIMASAKTA (2024)</li>
                 <li><strong>Kepala Bidang Hubungan Masyarakat</strong> - FPPI (2024)</li>
-                <li><strong>Anggota Staff</strong> - DPM U Komisi 7 (2024)</li>
+                <li><strong>Anggota Staff Komisi 7</strong> - DPM U (2024)</li>
             </ul>
         </section>
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2024 M. Rifki Anggara Yudha. All rights reserved.</p>
+    <p>&copy; 2024 M. Rifki Anggara Yudha.</p>
 </footer>
 
 </body>
