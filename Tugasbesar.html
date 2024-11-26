@@ -4,221 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko Buku Online</title>
-
-    <!-- Link Font Awesome -->
+    <title>Book Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- Custom CSS -->
-    <style>
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #4caf50;
-            color: white;
-            border-radius: 5px;
-            text-align: center;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #3e8e41;
-        }
-
-        /* Header Section */
-        header {
-            background-color: #f1f1f1;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        header .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        header nav {
-            display: flex;
-            gap: 15px;
-        }
-
-        header nav a {
-            font-size: 16px;
-            font-weight: 500;
-            color: #333;
-            transition: color 0.3s;
-        }
-
-        header nav a:hover {
-            color: #4caf50;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            color: white;
-            padding: 50px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 40px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        /* Books Section */
-        .books {
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .books h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 28px;
-            color: #333;
-        }
-
-        .books .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .books .grid .card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-
-        .books .grid .card:hover {
-            transform: scale(1.05);
-        }
-
-        .books .grid .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .books .grid .card .content {
-            padding: 15px;
-            text-align: center;
-        }
-
-        .books .grid .card .content h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .books .grid .card .content p {
-            font-size: 14px;
-            color: #777;
-            margin-bottom: 15px;
-        }
-
-        /* Footer */
-        footer {
-            background: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer a {
-            color: #4caf50;
-        }
-    </style>
 </head>
 
 <body>
     <!-- Header -->
     <header>
-        <div class="logo">Toko Buku</div>
-        <nav>
-            <a href="#home">Beranda</a>
-            <a href="#books">Koleksi Buku</a>
-            <a href="#about">Tentang Kami</a>
-            <a href="#contact">Kontak</a>
+        <a href="#" class="logo"><i class="fas fa-book"></i> Book Haven</a>
+        <nav class="navbar">
+            <a class="active" href="#home">Home</a>
+            <a href="#populer">Buku Populer</a>
+            <a href="#tentang">Tentang Kami</a>
+            <a href="#katalog">Katalog</a>
+            <a href="#review">Review</a>
+            <a href="#order">Pesan</a>
         </nav>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <h1>Selamat Datang di Toko Buku Online</h1>
-        <p>Menjelajahi dunia dengan membaca buku favorit Anda.</p>
-        <a href="#books" class="btn">Lihat Koleksi Buku</a>
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="content">
+            <h1>Selamat Datang di <span>Book Haven</span></h1>
+            <p>Temukan buku favorit Anda dari koleksi kami yang lengkap dan beragam.</p>
+            <a href="#katalog" class="btn">Lihat Koleksi</a>
+        </div>
+        <div class="image">
+            <img src="images/home-books.jpg" alt="Books">
+        </div>
     </section>
 
-    <!-- Books Section -->
-    <section class="books" id="books">
-        <h2>Koleksi Buku Terbaru</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="images/book1.jpg" alt="Buku 1">
-                <div class="content">
-                    <h3>Judul Buku 1</h3>
-                    <p>Penulis: Nama Penulis</p>
-                    <span>Rp 100.000</span><br>
-                    <a href="#" class="btn">Beli Sekarang</a>
-                </div>
+    <!-- Buku Populer -->
+    <section id="populer">
+        <h1>Buku Populer</h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="images/book1.jpg" alt="Book">
+                <h3>Judul Buku 1</h3>
+                <a href="#" class="btn">Lihat Detail</a>
             </div>
-            <div class="card">
-                <img src="images/book2.jpg" alt="Buku 2">
-                <div class="content">
-                    <h3>Judul Buku 2</h3>
-                    <p>Penulis: Nama Penulis</p>
-                    <span>Rp 120.000</span><br>
-                    <a href="#" class="btn">Beli Sekarang</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/book3.jpg" alt="Buku 3">
-                <div class="content">
-                    <h3>Judul Buku 3</h3>
-                    <p>Penulis: Nama Penulis</p>
-                    <span>Rp 150.000</span><br>
-                    <a href="#" class="btn">Beli Sekarang</a>
-                </div>
+            <div class="box">
+                <img src="images/book2.jpg" alt="Book">
+                <h3>Judul Buku 2</h3>
+                <a href="#" class="btn">Lihat Detail</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        &copy; 2024 Toko Buku Online. Inspirasi Membaca Anda.
+        <p>&copy; 2024 Book Haven. Semua Hak Dilindungi.</p>
     </footer>
 </body>
 
