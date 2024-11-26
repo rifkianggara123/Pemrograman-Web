@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -34,57 +35,46 @@
             <p>Temukan buku favorit Anda dari koleksi kami yang lengkap dan beragam.</p>
             <a href="#katalog" class="btn">Lihat Koleksi</a>
         </div>
-        <div class="image">
-            <img src="buku1.jpg" alt="Books">
+        <div class="slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <img src="buku1.jpg" alt="Book 1">
+                        <h3>Judul Buku 1</h3>
+                        <p>Penulis Buku 1</p>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <img src="buku2.jpg" alt="Book 2">
+                        <h3>Judul Buku 2</h3>
+                        <p>Penulis Buku 2</p>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <img src="buku3.jpg" alt="Book 3">
+                        <h3>Judul Buku 3</h3>
+                        <p>Penulis Buku 3</p>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
     </section>
-    <!-- Home Section -->
-<section class="home" id="home">
-    <div class="content">
-        <h1>Selamat Datang di <span>Book Haven</span></h1>
-        <p>Temukan buku favorit Anda dari koleksi kami yang lengkap dan beragam.</p>
-        <a href="#katalog" class="btn">Lihat Koleksi</a>
-    </div>
-    <div class="slider">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                    <img src="buku2.jpg" alt="Book 1">
-                    <h3>Judul Buku 1</h3>
-                    <p>Penulis Buku 1</p>
-                </div>
-                <!-- Slide 2 -->
-                <div class="swiper-slide">
-                    <img src="wibu3.jpg" alt="Book 2">
-                    <h3>Judul Buku 2</h3>
-                    <p>Penulis Buku 2</p>
-                </div>
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                    <img src="buku2.jpg" alt="Book 3">
-                    <h3>Judul Buku 3</h3>
-                    <p>Penulis Buku 3</p>
-                </div>
-            </div>
-            <!-- Pagination -->
-            <div class="swiper-pagination"></div>
-        </div>
-    </div>
-</section>
 
     <!-- Buku Populer -->
     <section id="populer">
-        <h1>Buku Populer</h1>
+        <h1 class="section-title">Buku Populer</h1>
         <div class="box-container">
             <div class="box">
-                <img src="images/book1.jpg" alt="Book">
-                <h3>Judul Buku 1</h3>
+                <img src="buku1.jpg" alt="Book">
+                <h3>Judul Buku Populer 1</h3>
                 <a href="#" class="btn">Lihat Detail</a>
             </div>
             <div class="box">
-                <img src="images/book2.jpg" alt="Book">
-                <h3>Judul Buku 2</h3>
+                <img src="buku2.jpg" alt="Book">
+                <h3>Judul Buku Populer 2</h3>
                 <a href="#" class="btn">Lihat Detail</a>
             </div>
         </div>
@@ -94,6 +84,27 @@
     <footer>
         <p>&copy; 2024 Book Haven. Semua Hak Dilindungi.</p>
     </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        // Mobile menu toggle
+        document.getElementById('menu-bars').addEventListener('click', () => {
+            document.querySelector('.navbar').classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
